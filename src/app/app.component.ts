@@ -15,17 +15,22 @@ export class AppComponent {
   }
 
   wybierzObrazek() {
-    if(this.pogoda === "słonecznie") {
-      this.załóżOkularyPrzeciwsłoneczne()
-    }
-    if(this.pogoda === "deszczowo") {
-      this.zabierzParasol()
-    } 
     if (this.pogoda === "normalnie") {
       this.nicNieZabieraj()
     }
-  }
+    /*
+    Uzupełnij funkcję!
+    Jezeli pogoda to "słonecznie" -> this.załóżOkularyPrzeciwsłoneczne()
+    Jezeli "deszczowo" -> this.zabierzParasol()
 
+    Podpowiedź: komenda if wygląda tak:
+    if (sprawdzanaWartosc === "oczekiwanaWartosc") {
+      wykonajAkcje()
+    }
+    a to jaką mamy pogodę ukrywa się pod zmienną:
+    this.pogoda
+    */
+  }
 
   załóżOkularyPrzeciwsłoneczne() {
     this.wybranyObrazek = "https://github.com/dominika-zajac/if-example/blob/master/src/assets/sunny.png?raw=true"
