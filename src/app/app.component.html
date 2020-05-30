@@ -1,8 +1,8 @@
 <div class="app">
   <div class="section left-section">
-    <button (click)="setWeather('sunny')">Słonecznie</button>
-    <button (click)="setWeather('normal')">Normalnie</button>
-    <button (click)="setWeather('rainy')">Deszczowo</button>
+    <button (click)="setWeather('słonecznie')">Słonecznie</button>
+    <button (click)="setWeather('normalnie')">Normalnie</button>
+    <button (click)="setWeather('deszczowo')">Deszczowo</button>
     <blockquote>
       <pre>
         <code>
@@ -11,15 +11,17 @@ if (pogoda === 'słonecznie') &#123;
 &#125;
 
 if (pogoda === 'deszczowo') &#123;
-  zabierzParasol
+  zabierzParasol()
+&#125;
+
+if (pogoda === 'normalnie') &#123;
+   nieZabierajNic()
 &#125;
         </code>
       </pre>
     </blockquote>
   </div>
   <div class="section right-section">
-    <img src="../assets/base.png" *ngIf="weather==='normal'">
-    <img src="../assets/sunny.png" *ngIf="weather==='sunny'">
-    <img src="../assets/rainy.png" *ngIf="weather==='rainy'">
+    <img [src]="wybranyObrazek">
   </div>
 </div>
